@@ -1,59 +1,122 @@
-// Function for concat()
+// Example showing how concat() works
+
 function useConcat() {
 
-    // Declare variables using var
+
+
+    // Create variables for first and last name
+
     var firstName = "John";
+
     var lastName = "Doe";
 
-    // Join strings
+
+
+    // Combine the names into one string
+
     var fullName = firstName.concat(" ", lastName);
 
-    // Show result
-    document.getElementById("outputText").innerHTML =
-        "concat() result: " + fullName;
+
+
+    // Display the result on the page
+
+    var outputElem = document.getElementById("outputText");
+    if (outputElem) {
+        outputElem.innerHTML = "concat() result: " + fullName;
+    }
+
 }
 
 
-// Function for slice()
+
+
+
+// Example showing how slice() works
+
 function useSlice() {
 
-    // Declare a string
+
+
+    // Create a message string
+
     var message = "JavaScript is fun!";
 
-    // Cut part of the string
+
+
+    // Take a part of the message
+
     var result = message.slice(0, 10);
 
-    // Show result
-    document.getElementById("outputText").innerHTML =
-        "slice() result: " + result;
+
+
+    // Display the result on the page
+
+    var outputElem = document.getElementById("outputText");
+    if (outputElem) {
+        outputElem.innerHTML = "slice() result: " + result;
+    }
+
 }
 
 
-// Function for toString()
+
+
+
+// Example showing how toString() works
+
 function useToString() {
 
-    // Declare a number
+
+
+    // Create a number variable
+
     var number = 123;
 
-    // Convert to string
+
+
+    // Change the number to a string
+
     var result = number.toString();
 
-    // Show result
-    document.getElementById("outputText").innerHTML =
-        "toString() result: " + result;
+
+
+    // Display the result on the page
+
+    var outputElem = document.getElementById("outputText");
+    if (outputElem) {
+        outputElem.innerHTML = "toString() result: " + result;
+    }
+
 }
 
 
-// Function for toPrecision()
+
+
+
+// Example showing how toPrecision() works
+
 function useToPrecision() {
 
-    // Declare a number
+
+
+    // Create a number variable
+
     var num = 3.1415926535;
 
-    // Format number
+
+
+    // Format the number to a set length
+
     var result = num.toPrecision(4);
 
-    // Show result
-    document.getElementById("outputText").innerHTML =
-        "toPrecision() result: " + result;
+
+
+    // Display the result on the page
+
+    var outputElem = document.getElementById("outputText");
+    if (outputElem) {
+        outputElem.innerHTML = "toPrecision() result: " + result;
+    }
+
 }
+
