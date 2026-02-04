@@ -2,32 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Loops and Arrays Project</title>
+    <title>What is your favorite car brand?</title>
     <script src="JS/main.js" defer></script>
 </head>
 
 <body>
 
-    <!-- While Loop Section -->
-    <button onclick="startCounting()">Start Counting</button>
-    <p id="countDisplay"></p>
-    <hr>
+    <h1>What is your favorite car brand?</h1>
+    <h3>Pick your favorite brand from the list below:</h3>
+    <ul>
+        <li>Toyota</li>
+        <li>Honda</li>
+        <li>Ford</li>
+        <li>Chevrolet</li>
+        <li>BMW</li>
+    </ul>
+    <h3>Enter your choice below:</h3>
+ 
+    <input id="Brand_Input" type="text">
+    <button onclick="checkBrand()">Submit</button>
+    <p id="Output"></p>
 
-    <!-- For Loop Section -->
-    <button onclick="showBand()">Show Band Members</button>
-    <p id="bandList"></p>
-    <hr>
-
-    <!-- Array Section -->
-    <button onclick="favoriteColor()">Pick My Color</button>
-    <p id="colorResult"></p>
-    <hr>
-
-    <!-- Object Section -->
-    <button onclick="showCar()">My Car Info</button>
-    <p id="carInfo"></p>
-    <hr>
-
+    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
 </body>
 </html>
 

@@ -1,65 +1,40 @@
-// While loop example
-function startCounting() {
+function checkBrand() {
+  var Brand_Output;
+  var Brands = document.getElementById("Brand_Input").value;
+  var Brand_String = " is a great brand!";
 
-    let output = "";
-    let number = 1;
+  switch (Brands) {
+    case "Toyota":
+      Brand_Output = "Toyota" + Brand_String;
+      break;
+      case "Honda":
+      Brand_Output = "Honda" + Brand_String;
+      break;
+      case "Ford":
+      Brand_Output = "Ford" + Brand_String;
+      break;
+      case "Chevrolet":
+      Brand_Output = "Chevrolet" + Brand_String;
+      break;
+      case "BMW":
+      Brand_Output = "BMW" + Brand_String;
+      break;
+    default:
+      Brand_Output = "Please enter a brand exactly as written on the above list.";
+  }
 
-    while (number <= 10) {
-        output += number + "<br>";
-        number++;
-    }
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
 
-    document.getElementById("countDisplay").innerHTML = output;
-}
+// Create gradient
+var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "white");
 
-
-// For loop example with array
-let bandMembers = [
-    "Alex",
-    "Jordan",
-    "Taylor",
-    "Chris",
-    "Morgan",
-    "Jamie"
-];
-
-function showBand() {
-
-    let list = "";
-
-    for (let i = 0; i < bandMembers.length; i++) {
-        list += bandMembers[i] + "<br>";
-    }
-
-    document.getElementById("bandList").innerHTML = list;
-}
-
-
-// Array example
-function favoriteColor() {
-
-    let colors = [];
-
-    colors.push("Red");
-    colors.push("Blue");
-    colors.push("Green");
-    colors.push("Purple");
-    colors.push("Orange");
-
-    document.getElementById("colorResult").innerHTML =
-        "My favorite color is " + colors[2] + "!";
-}
+// Fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(10, 10, 150, 80);
 
 
-// Object example
-function showCar() {
-
-    let myCar = {
-        brand: "Toyota",
-        year: 2022,
-        paint: "Silver"
-    };
-
-    document.getElementById("carInfo").innerHTML =
-        "I drive a " + myCar.year + " " + myCar.paint + " " + myCar.brand + ".";
+  document.getElementById("Output").innerHTML = Brand_Output;
 }
